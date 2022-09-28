@@ -8,23 +8,6 @@ window.addEventListener('load', () => {
 
     const ctx = canvas.getContext('2d');
 
-    // ctx.fillStyle = 'red';
-    // ctx.fillRect(100, 50, 100, 150);
-
-    // ctx.strokeStyle = 'blue';
-    // ctx.lineWidth = 3;
-    // ctx.strokeRect(150, 150, 70, 70);
-
-    // ctx.lineWidth = 3;
-    // ctx.strokeStyle = 'red';
-
-    // ctx.beginPath();
-    // ctx.moveTo(100, 100);
-    // ctx.lineTo(200, 100);
-    // ctx.lineTo(150, 200);
-    // ctx.closePath();
-    // ctx.stroke();
-
     let painting = false;
 
     const tryDraw = (event) => {
