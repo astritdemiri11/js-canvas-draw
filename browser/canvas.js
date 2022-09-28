@@ -31,12 +31,23 @@ window.addEventListener('load', () => {
         }
 
         ctx.lineCap = 'round';
-        ctx.lineTo(event.clientX, event.clientY - 42);
+
+        console.log(event.touches[0]);
+
+        if (event.type == 'mousedown' || event.type == 'mouseup' || event.type == 'mousemove')
+            ctx.lineTo(event.clientX, event.clientY - OFFSET_TOP);
+        else
+            ctx.lineTo(event.touches[0].pageX, event.touches[0].pageY - OFFSET_TOP);
+
         ctx.stroke();
 
         // For a smooth line
         ctx.beginPath();
-        ctx.moveTo(event.clientX, event.clientY - OFFSET_TOP);
+
+        if (event.type == 'mousedown' || event.type == 'mouseup' || event.type == 'mousemove')
+            ctx.moveTo(event.clientX, event.clientY - OFFSET_TOP);
+        else
+            ctx.moveTo(event.touches[0].pageX, event.touches[0].pageY - OFFSET_TOP);
     };
 
     canvas.addEventListener('mousedown', (event) => {
