@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+}
+
+.settings {
+    padding: 8px;
+}
+
+.settings input {
+    width: 30px;
+}
