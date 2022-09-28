@@ -46,9 +46,22 @@ window.addEventListener('load', () => {
         tryDraw(event);
     });
 
+    canvas.addEventListener('touchstart', (event) => {
+        painting = true;
+
+        ctx.beginPath();
+        tryDraw(event);
+    });
+
     canvas.addEventListener('mouseup', () => {
         painting = false;
     });
 
+    canvas.addEventListener('touchend', () => {
+        painting = false;
+    });
+
     canvas.addEventListener('mousemove', tryDraw);
+
+    canvas.addEventListener('touchmove', tryDraw);
 });
