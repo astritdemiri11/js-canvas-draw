@@ -1,22 +1,9 @@
 import express from 'express';
-import * as fs from 'fs';
-import path from 'path';
+import { join } from 'path';
 
 export function app() {
   const server = express();
-  const distFolder = path.join(process.cwd(), 'browser');
-
-  server.use(function (request, response, next) {
-    if (process.env['NODE_ENV'] !== 'development' && !request.secure) {
-      const host = request.get('host');
-
-      if (host && host.toLowerCase().includes('astritdemiri.com')) {
-        return response.redirect("https://" + request.headers.host + request.url);
-      }
-    }
-
-    next();
-  })
+  const distFolder = join(process.cwd(), 'browser');
 
   server.set('views', distFolder);
 
