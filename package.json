@@ -1,0 +1,24 @@
+{
+  "name": "js-canvas-draw",
+  "version": "1.0.0",
+  "description": "Simple draw app with js canvas.",
+  "main": "canvas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astritdemiri11/js-canvas-draw.git"
+  },
+  "keywords": [
+    "canvas",
+    "draw",
+    "js"
+  ],
+  "author": "Astrit Demiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astritdemiri11/js-canvas-draw/issues"
+  },
+  "homepage": "https://github.com/astritdemiri11/js-canvas-draw#readme"
+}
