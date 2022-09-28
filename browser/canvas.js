@@ -62,6 +62,5 @@ window.addEventListener('load', () => {
     });
 
     canvas.addEventListener('mousemove', tryDraw);
-
     canvas.addEventListener('touchmove', tryDraw);
 });
