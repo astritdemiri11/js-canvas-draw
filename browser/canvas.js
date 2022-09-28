@@ -32,8 +32,6 @@ window.addEventListener('load', () => {
 
         ctx.lineCap = 'round';
 
-        console.log(event.touches[0]);
-
         if (event.type == 'mousedown' || event.type == 'mouseup' || event.type == 'mousemove')
             ctx.lineTo(event.clientX, event.clientY - OFFSET_TOP);
         else
